@@ -74,19 +74,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Beni Hatırla"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/colorDarkGray"
                 android:textSize="16sp" />
         </LinearLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginTop="32dp"
-            android:background="@drawable/button_background"
             android:onClick="login"
             android:text="Giriş"
             android:textAllCaps="false"
-            android:textColor="#FFF"
             android:textSize="20sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

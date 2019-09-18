@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidTechChallenge</string>
     <string name="remember_me_key">IS_REMEMBER_ME</string>
+    <string name="API_URL">http://kariyertechchallenge.mockable.io</string>
 </resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/rv_day_tv"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="08" />
+
+    <TextView
+        android:id="@+id/rv_month_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/rv_day_tv"
+        app:layout_constraintStart_toStartOf="@id/rv_day_tv"
+        app:layout_constraintTop_toBottomOf="@id/rv_day_tv"
+        tools:text="Ekim" />
+
+    <View
+        android:id="@+id/rv_separator"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorSeparator"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_product_state_icon"
+        app:layout_constraintStart_toEndOf="@id/rv_day_tv"
+        app:layout_constraintTop_toTopOf="@id/rv_day_tv" />
+
+    <TextView
+        android:id="@+id/rv_market_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/rv_separator"
+        app:layout_constraintTop_toTopOf="@+id/rv_day_tv"
+        tools:text="Market 1" />
+
+    <TextView
+        android:id="@+id/rv_order_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/rv_market_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/rv_market_name_tv"
+        tools:text="Şampuan 250 ml" />
+
+    <ImageView
+        android:id="@+id/rv_product_state_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_preparing"
+        app:layout_constraintStart_toStartOf="@+id/rv_order_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/rv_order_name_tv" />
+
+    <TextView
+        android:id="@+id/rv_product_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/rv_product_state_icon"
+        app:layout_constraintStart_toEndOf="@id/rv_product_state_icon"
+        app:layout_constraintTop_toTopOf="@id/rv_product_state_icon"
+        tools:text="Hazırlanıyor"
+        tools:textColor="@color/colorPreparing" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_market_name_tv" />
+
+    <TextView
+        android:id="@+id/rv_product_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/rv_order_name_tv"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        tools:text="25TL" />
+
+    <LinearLayout
+        android:id="@+id/rv_order_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorLightGray"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_separator">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/order_detail_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="112dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Sıvı Sabun 250 ml" />
+
+            <TextView
+                android:id="@+id/summary_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/order_detail_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="25TL" />
+
+            <View
+                android:id="@+id/rv_order_detail_underline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorSeparator"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/summary_price_tv"
+                app:layout_constraintStart_toStartOf="@id/order_detail_tv"
+                app:layout_constraintTop_toBottomOf="@id/order_detail_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

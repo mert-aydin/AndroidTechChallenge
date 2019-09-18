@@ -20,8 +20,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         sharedPref = getPreferences(Context.MODE_PRIVATE)
 
-        if (sharedPref.getBoolean(getString(R.string.remember_me_key), false))
+        if (sharedPref.getBoolean(getString(R.string.remember_me_key), false)) {
+            finish()
             startActivity(Intent(this, OrdersActivity::class.java))
+        }
 
         setContentView(R.layout.activity_login)
 
