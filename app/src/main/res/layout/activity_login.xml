@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/login_screen_header"
@@ -79,11 +79,11 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/login_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:background="@drawable/button_background"
+            android:onClick="login"
             android:text="Giriş"
             android:textAllCaps="false"
             android:textColor="#FFF"
