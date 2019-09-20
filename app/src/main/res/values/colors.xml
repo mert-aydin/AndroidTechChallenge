@@ -8,7 +8,7 @@
     <color name="colorLightGray">#E1E3E4</color>
     <color name="colorRed">#ED4639</color>
     <color name="colorPreparing">#F28B31</color>
-    <color name="colorWaitingApproval">#ED4639</color>
+    <color name="colorAwaitingApproval">#ED4639</color>
     <color name="colorOnDelivery">#52AE50</color>
     <color name="colorSeparator">#A8A8A8</color>
 </resources>

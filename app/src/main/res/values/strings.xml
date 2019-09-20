@@ -2,4 +2,20 @@
     <string name="app_name">AndroidTechChallenge</string>
     <string name="remember_me_key">IS_REMEMBER_ME</string>
     <string name="API_URL">http://kariyertechchallenge.mockable.io</string>
+    <string name="login_credentials_username">kariyer</string>
+    <string name="login_credentials_password">2019ADev</string>
+    <string name="logout">Çıkış Yap</string>
+    <string name="logout_validation">Çıkış yapmak istiyor musunuz?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="my_orders">Siparişlerim</string>
+    <string name="my_market">MARKETİM</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="remember_me_switch_label">Beni Hatırla</string>
+    <string name="login">Giriş</string>
+    <string name="on_delivery">Yolda</string>
+    <string name="preparing">Hazırlanıyor</string>
+    <string name="awaiting_approval">Onay Bekliyor</string>
+    <string name="tl">%1$sTL</string>
 </resources>

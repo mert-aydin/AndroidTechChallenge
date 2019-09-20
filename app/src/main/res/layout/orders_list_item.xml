@@ -53,10 +53,14 @@
 
     <TextView
         android:id="@+id/rv_order_name_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:singleLine="true"
         android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/rv_product_price_tv"
         app:layout_constraintStart_toStartOf="@+id/rv_market_name_tv"
         app:layout_constraintTop_toBottomOf="@+id/rv_market_name_tv"
         tools:text="Şampuan 250 ml" />

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="MARKETİM"
+        android:text="@string/my_market"
         android:textColor="@color/colorRed"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -32,7 +32,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Kullanıcı Adı">
+            android:hint="@string/username">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/user_name_et"
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Şifre">
+            android:hint="@string/password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_et"
@@ -73,7 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Beni Hatırla"
+                android:text="@string/remember_me_switch_label"
                 android:textColor="@color/colorDarkGray"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -84,7 +84,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="32dp"
             android:onClick="login"
-            android:text="Giriş"
+            android:text="@string/login"
             android:textAllCaps="false"
             android:textSize="20sp" />
     </LinearLayout>

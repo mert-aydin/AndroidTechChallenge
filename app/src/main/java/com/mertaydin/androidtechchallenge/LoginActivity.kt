@@ -14,15 +14,18 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var userNameET: TextInputEditText
     private lateinit var passwordET: TextInputEditText
     private lateinit var rememberMeSwitch: Switch
-    private lateinit var sharedPref: SharedPreferences
+
+    companion object {
+        lateinit var sharedPref: SharedPreferences
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedPref = getPreferences(Context.MODE_PRIVATE)
 
         if (sharedPref.getBoolean(getString(R.string.remember_me_key), false)) {
-            finish()
             startActivity(Intent(this, OrdersActivity::class.java))
+            finish()
         }
 
         setContentView(R.layout.activity_login)
@@ -34,7 +37,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun login(view: View) {
-
         with(sharedPref.edit()) {
             putBoolean(getString(R.string.remember_me_key), rememberMeSwitch.isChecked)
             commit()
@@ -43,9 +45,10 @@ class LoginActivity : AppCompatActivity() {
         val userName = userNameET.text.toString()
         val password = passwordET.text.toString()
 
-        if (userName == "kariyer" && password == "2019ADev")
-
+        if (userName == getString(R.string.login_credentials_username) && password == getString(R.string.login_credentials_password)) {
             startActivity(Intent(this, OrdersActivity::class.java))
+            finish()
+        }
 
     }
 }

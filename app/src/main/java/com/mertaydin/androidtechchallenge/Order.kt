@@ -6,7 +6,6 @@ data class Order(
     val marketName: String,
     val orderName: String,
     val productPrice: Double,
-    /*val productStateIcon: Drawable,*/
     val productState: String,
     val productDetail: ProductDetail
 )
