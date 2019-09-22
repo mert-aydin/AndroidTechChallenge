@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.orders_list_item.view.*
 class RecyclerViewAdapter(private val orderList: List<Order>) :
     RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
     companion object {
+        // hashMap used to get month name from month index
         private var monthNames: HashMap<String, String> = HashMap()
     }
 
@@ -42,12 +43,14 @@ class RecyclerViewAdapter(private val orderList: List<Order>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItems(orderList[position])
         holder.itemView.setOnClickListener {
+            // show and hide order details when an item is clicked
             holder.itemView.rv_order_details.visibility =
                 if (holder.itemView.rv_order_details.visibility == View.VISIBLE)
                     View.GONE
                 else
                     View.VISIBLE
 
+            // if the last item is clicked, scroll to bottom
             if (position + 1 == itemCount) {
                 OrdersActivity.scrollToBottom()
             }
@@ -67,6 +70,7 @@ class RecyclerViewAdapter(private val orderList: List<Order>) :
             itemView.rv_month_tv.text = monthNames[order.month]
             itemView.rv_market_name_tv.text = order.marketName
             itemView.rv_order_name_tv.text = order.orderName
+            // set productState text and icon
             when {
                 order.productState == context.getString(R.string.on_delivery) -> {
                     itemView.rv_product_state_icon.setBackgroundResource(R.drawable.ic_on_delivery)

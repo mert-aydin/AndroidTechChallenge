@@ -23,6 +23,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         sharedPref = getPreferences(Context.MODE_PRIVATE)
 
+        // checks if "remember me" is checked and navigate to OrdersActivity if checked
         if (sharedPref.getBoolean(getString(R.string.remember_me_key), false)) {
             startActivity(Intent(this, OrdersActivity::class.java))
             finish()
@@ -37,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun login(view: View) {
+        // saves user's choice of "remember me"
         with(sharedPref.edit()) {
             putBoolean(getString(R.string.remember_me_key), rememberMeSwitch.isChecked)
             commit()
@@ -45,6 +47,7 @@ class LoginActivity : AppCompatActivity() {
         val userName = userNameET.text.toString()
         val password = passwordET.text.toString()
 
+        // checks login credentials and do login if correct
         if (userName == getString(R.string.login_credentials_username) && password == getString(R.string.login_credentials_password)) {
             startActivity(Intent(this, OrdersActivity::class.java))
             finish()

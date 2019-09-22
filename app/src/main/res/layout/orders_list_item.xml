@@ -40,27 +40,30 @@
         app:layout_constraintStart_toEndOf="@id/rv_day_tv"
         app:layout_constraintTop_toTopOf="@id/rv_day_tv" />
 
+    <!--market name field (multiple line)-->
     <TextView
         android:id="@+id/rv_market_name_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/rv_product_price_tv"
         app:layout_constraintStart_toEndOf="@+id/rv_separator"
         app:layout_constraintTop_toTopOf="@+id/rv_day_tv"
         tools:text="Market 1" />
 
+    <!--order name field (single line and adds ellipsize at end if necessary)-->
     <TextView
         android:id="@+id/rv_order_name_tv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:ellipsize="end"
         android:singleLine="true"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/rv_product_price_tv"
+        app:layout_constraintEnd_toEndOf="@+id/rv_market_name_tv"
         app:layout_constraintStart_toStartOf="@+id/rv_market_name_tv"
         app:layout_constraintTop_toBottomOf="@+id/rv_market_name_tv"
         tools:text="Şampuan 250 ml" />
@@ -106,6 +109,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         tools:text="25TL" />
 
+    <!--layout for order detail-->
     <LinearLayout
         android:id="@+id/rv_order_details"
         android:layout_width="match_parent"
@@ -156,7 +160,6 @@
                 app:layout_constraintEnd_toEndOf="@+id/summary_price_tv"
                 app:layout_constraintStart_toStartOf="@id/order_detail_tv"
                 app:layout_constraintTop_toBottomOf="@id/order_detail_tv" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

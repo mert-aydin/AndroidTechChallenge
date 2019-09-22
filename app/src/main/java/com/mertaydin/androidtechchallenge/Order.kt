@@ -1,5 +1,6 @@
 package com.mertaydin.androidtechchallenge
 
+// Data class of Order object
 data class Order(
     val date: String,
     val month: String,
